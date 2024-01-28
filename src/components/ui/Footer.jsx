@@ -1,0 +1,53 @@
+/* eslint-disable no-unused-vars */
+import React from "react";
+import { Link } from "react-router-dom";
+
+function Footer() {
+  return (
+    <div className="footer">
+      <div className="footer-content">
+        <div className="footer-copy">
+          <h4 className="footer-name">audiophile</h4>
+          <div className="footer-nav">
+            <Link id="prod-nav" to="/">
+              Home
+            </Link>
+            <Link id="prod-nav" to="/">
+              Headphones
+            </Link>
+            <Link id="prod-nav" to="/">
+              Speakers
+            </Link>
+            <Link id="prod-nav" to="/">
+              Earphones
+            </Link>
+          </div>
+        </div>
+        <div>
+          <p className="footer-text">
+            Audiophile is an all in one stop to fulfill your audio needs. We are
+            a small team of music lovers and sound specialists who are devoted
+            to helping you get the most out of personal audio. Come and visit
+            our demo facility - we’re open 7 days a week.
+          </p>
+        </div>
+        <div className="footer-social">
+          <div className="footer-socials">
+            <Link to="/">
+              <img src="../Images/Path (1).svg" alt="" />
+            </Link>
+            <Link to="/">
+              <img src="../Images/Path.svg" alt="" />
+            </Link>
+            <Link to="/">
+              <img src="../Images/Shape.svg" alt="" />
+            </Link>
+          </div>
+          <span className="copyright">Copyright 2024. All Rights Reserved</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Footer;
