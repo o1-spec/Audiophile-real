@@ -21,6 +21,8 @@ import Earphone, {
 import Speaker, {
   loader as speakDescLoader,
 } from "./components/pages/ProductSection/Speaker";
+import CheckoutPage from "./components/pages/products/CheckoutPage";
+import Error from "./components/ui/Error";
 
 const router = createBrowserRouter([
   {
@@ -34,33 +36,43 @@ const router = createBrowserRouter([
         path: "/Headphones",
         element: <HeadProducts />,
         loader: headLoader,
+        errorElement: <Error/>
       },
       {
         path: "/Speakers",
         element: <SpeakerProducts />,
         loader: speakLoader,
+        errorElement: <Error/>
       },
       {
         path: "/Earphones",
         element: <EarPhoneProduct />,
         loader: earLoader,
+        errorElement: <Error/>
       },
       {
         path: "/Headphones/:name",
         element: <Headphone />,
         loader: headDescLoader,
+        errorElement: <Error/>
       },
       {
         path: "/Speakers/:name",
         element: <Speaker />,
         loader: speakDescLoader,
-      },
+        errorElement: <Error/>
+      }, 
       {
         path: "/Earphones/:name",
         element: <Earphone />,
         loader: earDescLoader,
+        errorElement: <Error/>
       },
     ],
+  },
+  {
+    path: "/product/checkout",
+    element: <CheckoutPage />,
   },
 ]);
 

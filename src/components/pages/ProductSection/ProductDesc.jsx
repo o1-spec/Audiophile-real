@@ -8,21 +8,23 @@ import {
   getCurrentQuantityById,
   increaseItemQuantity,
 } from "../Cart/cartSlice";
+import AlreadyCart from "../Cart/AlreadyCart";
+import AddToCart from "../Cart/AddToCart";
 
 function ProductDesc({ selectedProduct }) {
-
   const dispatch = useDispatch();
-  const { id, imageUrl, name, price, quantity } = selectedProduct;
+  const { id, imageUrl, name, price, quantity, accronym } = selectedProduct;
 
   const currentQuantity = useSelector(getCurrentQuantityById(id));
+  console.log(selectedProduct.inTheBox);
 
   const isInCart = currentQuantity > 0;
-
   function handleToCart() {
     const newItem = {
       id,
       imageUrl,
       name,
+      accronym,
       quantity,
       price,
       totalPrice: price * 1,
@@ -50,9 +52,11 @@ function ProductDesc({ selectedProduct }) {
                   <span className="count">{selectedProduct.quantity}</span>
                   <button className="plus">+</button>
                 </div>
-                <button className="add-cart" onClick={handleToCart}>
-                  Add to Cart
-                </button>
+                {isInCart ? (
+                  <AlreadyCart />
+                ) : (
+                  <AddToCart handleToCart={handleToCart} />
+                )}
               </div>
             </div>
           </div>
@@ -61,7 +65,22 @@ function ProductDesc({ selectedProduct }) {
               <h3>Features</h3>
               <p>{selectedProduct.features}</p>
             </div>
-            <div className="inthebox"></div>
+            <div className="inthebox-content">
+              <h3>In the Box</h3>
+              <div className="inthebox">
+                <div>
+                  {selectedProduct.inTheBoxTimes.map((int) => (
+                    // eslint-disable-next-line react/jsx-key
+                    <p>{int}</p>
+                  ))}
+                </div>
+                <div>
+                  {selectedProduct.inTheBox.map((int) => (
+                    <p key={int}>{int}</p>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
           <div className="product-images">
             {selectedProduct.subImages.map((img) => (

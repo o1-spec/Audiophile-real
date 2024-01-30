@@ -1,9 +1,16 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import CartContent from "../pages/Cart/CartContent";
+import { useSelector } from "react-redux";
+import { getCart } from "../pages/Cart/cartSlice";
 
-function Nav() {
+function Nav({cartBar, toggleCart}) {
+  
+  const cart = useSelector(getCart);
+
   return (
     <>
       <header>
@@ -34,11 +41,12 @@ function Nav() {
               Earphones
             </Link>
           </nav>
-          <div className="nav-img">
+          <div className="nav-img" onClick={() => toggleCart()}>
             <img src="../Images/Combined Shape.svg" alt="" />
+            <span>{cart.length}</span>
           </div>
         </div>
-        <CartContent/>
+        {cartBar ? <CartContent /> : null}
       </header>
     </>
   );

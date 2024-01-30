@@ -7,10 +7,12 @@ function Carts({ cart }) {
   const dispatch = useDispatch();
   return (
     <div className="cart-content">
-      <img src={cart.imageUrl} alt="" />
-      <div className="content-price">
-        <h6>{cart.name}</h6>
-        <span>{cart.totalPrice}</span>
+      <div className="">
+        <img src={cart.imageUrl} alt="" />
+        <div className="content-price">
+          <h6>{cart.accronym}</h6>
+          <span>${cart.totalPrice}</span>
+        </div>
       </div>
       <div className="content-btns">
         <button onClick={() => dispatch(increaseItemQuantity(cart.id))}>
