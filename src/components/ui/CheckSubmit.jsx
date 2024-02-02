@@ -1,21 +1,25 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useSelector } from "react-redux";
-import { getCart } from "../pages/Cart/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { clearCart, getCart } from "../pages/Cart/cartSlice";
 import { Link } from "react-router-dom";
 import { getTotalCartPrice } from "../pages/Cart/cartSlice";
 
-function CheckSubmit() {
+function CheckSubmit({ checkOpen }) {
+  const dispatch = useDispatch();
   const CheckCart = useSelector(getCart);
   const totalCartPrice = useSelector(getTotalCartPrice);
   let VAT = 1015;
   return (
-    <div className="checksubmit">
+    <div className={checkOpen ? "checksubmit" : "closeCheckSubmit"}>
       <div>
         <p className="check-tick">
           <span>&#x2713;</span>
         </p>
         <div className="check-submitdiv">
-          <h4 className="check-thank">Thank You <br/> For Your Order</h4>
+          <h4 className="check-thank">
+            Thank You <br /> For Your Order
+          </h4>
           <p className="check-email">
             You will receive an email confirmation reply
           </p>
@@ -42,7 +46,9 @@ function CheckSubmit() {
             </div>
           </div>
           <button className="back-checkout">
-            <Link to="/">Back To Home</Link>
+            <Link to="/" onClick={() => dispatch(clearCart())}>
+              Back To Home
+            </Link>
           </button>
         </div>
       </div>

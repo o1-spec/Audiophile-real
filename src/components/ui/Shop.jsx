@@ -13,7 +13,7 @@ function Shop() {
                 </div>
                 <h5>Headphones</h5>
                 <div className="item-link">
-                    <Link to="/">
+                    <Link to="/Headphones">
                         Shop
                     </Link>
                     <img src="../Images/Path 2.png" alt=""/>
@@ -26,7 +26,7 @@ function Shop() {
                 </div>
                 <h5>Speakers</h5>
                 <div className="item-link">
-                    <Link to="/">
+                    <Link to="/Speakers">
                         Shop
                     </Link>
                     <img src="../Images/Path 2.png" alt=""/>
@@ -39,7 +39,7 @@ function Shop() {
                 </div>
                 <h5>Earphones</h5>
                 <div className="item-link">
-                    <Link to="/">
+                    <Link to="/Earphones">
                         Shop
                     </Link>
                     <img src="../Images/Path 2.png" alt=""/>

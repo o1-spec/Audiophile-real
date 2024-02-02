@@ -15,11 +15,19 @@ function Carts({ cart }) {
         </div>
       </div>
       <div className="content-btns">
-        <button onClick={() => dispatch(increaseItemQuantity(cart.id))}>
+        <button
+          onClick={() => {
+            dispatch(increaseItemQuantity(cart.id));
+          }}
+        >
           +
         </button>
         <button>{cart.quantity}</button>
-        <button onClick={() => dispatch(decreaseItemQuantity(cart.id))}>
+        <button
+          onClick={() => {
+            dispatch(decreaseItemQuantity(cart.id));
+          }}
+        >
           -
         </button>
       </div>

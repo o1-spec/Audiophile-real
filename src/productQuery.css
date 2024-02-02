@@ -1,0 +1,296 @@
+@media (max-width: 1000px) {
+  .product-cont {
+    gap: 5rem;
+  }
+
+  .prod-describe {
+    gap: 4rem;
+  }
+
+  .desc-img {
+    width: 80vw;
+  }
+
+  .product-description {
+    max-width: fit-content;
+    padding: 9rem 3rem 0rem 3rem;
+  }
+
+  .checkout-boxunit {
+    padding: 4rem 2.4rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .product-cont {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkout-section {
+    flex-direction: column;
+  }
+
+  .prodd-info {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .prod-text {
+    max-width: 40rem;
+  }
+
+  .product-cont:nth-child(2) {
+    display: grid;
+  }
+
+  .checksubmit {
+    left: 30vw;
+  }
+
+  .pro-img {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+  }
+
+  .audio-img img {
+    width: 40rem;
+  }
+}
+
+@media (max-width: 770px) {
+  .audio-img img {
+    width: fit-content;
+  }
+
+  .prod-features {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 700px) {
+  .product-description {
+    padding-top: 5rem;
+  }
+
+  .audio-img img {
+    width: 90vw;
+  }
+  .nav-img-none {
+    display: block;
+  }
+
+  .checksubmit {
+    left: 20vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-nav {
+    flex-direction: column;
+  }
+
+  .checksubmit {
+    left: 16vw;
+  }
+
+  .footer-copy {
+    align-items: center;
+  }
+
+  .footer-text {
+    text-align: center;
+  }
+
+  .footer-social {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+
+  .copyright {
+    text-align: center;
+    grid-row: 1;
+    font-size: 1.44rem;
+    padding-bottom: 4rem;
+  }
+
+  .footer-name {
+    font-size: 3rem;
+    padding-bottom: 4rem;
+  }
+
+  .footer-text {
+    padding: 2rem 2rem;
+    padding-bottom: 4rem;
+  }
+
+  .product-cont img {
+    width: 65vw;
+  }
+
+  .prod-describe {
+    flex-direction: column;
+  }
+
+  .desc-img img {
+    width: 60vw;
+  }
+
+  .product-images {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .prod-img:nth-child(2) {
+    grid-row: 3;
+  }
+
+  .prod-img:nth-child(3) {
+    transform: translateY(0rem);
+  }
+
+  .prod-img:nth-child(1) {
+    transform: translateY(0rem);
+  }
+
+  .also-like {
+    padding-top: 51rem;
+  }
+
+  .like {
+    flex-direction: column;
+  }
+
+  .checkout-section {
+    padding: 2rem 2.5rem 6rem 2.5rem;
+  }
+
+  .check-back a {
+    padding: 4rem 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .checksubmit {
+    left: 2%;
+  }
+
+  .prod-text {
+    max-width: fit-content;
+    font-size: 1.45rem;
+    padding: 0rem 2rem;
+  }
+
+  .prodd-info {
+    padding: 0rem 2rem;
+  }
+
+  .product-cont img {
+    width: 70vw;
+  }
+
+  .product-description {
+    padding: 5rem 2rem 0rem 2rem;
+  }
+
+  .box-1,
+  .box-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .box-2 div:nth-child(1) {
+    grid-column: span 1;
+  }
+
+  .box-3 {
+    flex-direction: column;
+  }
+
+  .features p {
+    font-size: 1.3rem;
+    line-height: 2rem;
+  }
+
+  .features h3 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+}
+
+@media (max-width: 450px) {
+  .audio-img img {
+    width: 85vw;
+  }
+
+  .product-cont img {
+    width: 75vw;
+  }
+
+  .prodd-info {
+    padding: 0rem 1rem;
+  }
+
+  .display-section {
+    padding-top: 8rem;
+  }
+
+  .desc-img {
+    width: 85vw;
+  }
+
+  .desc-img img {
+    width: 100%;
+  }
+
+  .product-description {
+    padding-top: 2.8rem;
+  }
+
+  .back {
+    padding-bottom: 2rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .checksubmit {
+    width: 37rem;
+  }
+
+  .product-cont img {
+    width: 85vw;
+  }
+
+  .inthebox-content h3 {
+    padding-bottom: 2rem;
+  }
+
+  .inthebox {
+    gap: 2rem;
+  }
+
+  .inthebox div {
+    gap: 1rem;
+  }
+
+  .inthebox div:nth-child(1) p {
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 388px) {
+  .checksubmit {
+    width: 34.5rem;
+    left: 4%;
+  }
+}

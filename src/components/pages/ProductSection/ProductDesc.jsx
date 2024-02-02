@@ -10,8 +10,16 @@ import {
 } from "../Cart/cartSlice";
 import AlreadyCart from "../Cart/AlreadyCart";
 import AddToCart from "../Cart/AddToCart";
+import { useState } from "react";
+import ItemAdded from "../Cart/ItemAdded";
+import RemoveItem from "../Cart/RemoveItem";
 
 function ProductDesc({ selectedProduct }) {
+  const [num, setNum] = useState(1);
+  const [pric, setPric] = useState(selectedProduct.price);
+  const [addedBlock, setAddedBlock] = useState(false);
+  const [already, setAlready] = useState(false);
+
   const dispatch = useDispatch();
   const { id, imageUrl, name, price, quantity, accronym } = selectedProduct;
 
@@ -19,22 +27,39 @@ function ProductDesc({ selectedProduct }) {
   console.log(selectedProduct.inTheBox);
 
   const isInCart = currentQuantity > 0;
+
+  const handleNum = function (action) {
+    if (action === "decrement" && num > 1) {
+      setNum(num - 1);
+      setPric(selectedProduct.price * (num - 1));
+      dispatch(decreaseItemQuantity(id));
+    } else if (action === "increment") {
+      setNum(num + 1);
+      setPric(selectedProduct.price * (num + 1));
+      dispatch(increaseItemQuantity(id));
+    }
+  };
+
   function handleToCart() {
     const newItem = {
       id,
       imageUrl,
       name,
       accronym,
-      quantity,
+      quantity: num,
       price,
-      totalPrice: price * 1,
+      totalPrice: price * num,
     };
     dispatch(addItem(newItem));
+
+    setInterval(setAddedBlock(true), 2000);
   }
   return (
     <>
       {selectedProduct ? (
         <div className="product-description">
+          {addedBlock === true && <ItemAdded />}
+          {already === true && <RemoveItem />}
           <div className="back">
             <Link to={`/${selectedProduct.category}`}>Go Back</Link>
           </div>
@@ -45,15 +70,25 @@ function ProductDesc({ selectedProduct }) {
             <div className="desc-text">
               <h3>{selectedProduct.name}</h3>
               <p>{selectedProduct.description}</p>
-              <span>${selectedProduct.price}</span>
+              <span>${pric}</span>
               <div className="counter">
                 <div>
-                  <button className="minus">-</button>
-                  <span className="count">{selectedProduct.quantity}</span>
-                  <button className="plus">+</button>
+                  <button
+                    className="minus"
+                    onClick={() => handleNum("decrement")}
+                  >
+                    -
+                  </button>
+                  <span className="count">{num}</span>
+                  <button
+                    className="plus"
+                    onClick={() => handleNum("increment")}
+                  >
+                    +
+                  </button>
                 </div>
                 {isInCart ? (
-                  <AlreadyCart />
+                  <AlreadyCart setAlready={setAlready} already={already} />
                 ) : (
                   <AddToCart handleToCart={handleToCart} />
                 )}

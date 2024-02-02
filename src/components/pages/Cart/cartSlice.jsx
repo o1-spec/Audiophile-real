@@ -11,18 +11,19 @@ const cartSlice = createSlice({
   reducers: {
     addItem(state, action) {
       state.cart.push(action.payload);
-      updateLocalStorage(state.cart)
+      updateLocalStorage(state.cart);
     },
     deleteItem(state, action) {
       state.cart = state.cart.filter((item) => item.id !== action.payload);
-      updateLocalStorage(state.cart)
+      updateLocalStorage(state.cart);
     },
+
     increaseItemQuantity(state, action) {
       const item = state.cart.find((item) => item.id === action.payload);
 
       item.quantity++;
       item.totalPrice = item.quantity * item.price;
-      updateLocalStorage(state.cart)
+      updateLocalStorage(state.cart);
     },
     decreaseItemQuantity(state, action) {
       const item = state.cart.find((item) => item.id === action.payload);
@@ -31,11 +32,11 @@ const cartSlice = createSlice({
       item.quantity--;
       item.totalPrice = item.quantity * item.price;
       if (item.quantity === 0) cartSlice.caseReducers.deleteItem(state, action);
-      updateLocalStorage(state.cart)
+      updateLocalStorage(state.cart);
     },
     clearCart(state) {
       state.cart = [];
-      updateLocalStorage(state.cart)
+      updateLocalStorage(state.cart);
     },
   },
 });

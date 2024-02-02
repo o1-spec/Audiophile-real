@@ -27,6 +27,7 @@ import Error from "./components/ui/Error";
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -36,37 +37,37 @@ const router = createBrowserRouter([
         path: "/Headphones",
         element: <HeadProducts />,
         loader: headLoader,
-        errorElement: <Error/>
+        errorElement: <Error />,
       },
       {
         path: "/Speakers",
         element: <SpeakerProducts />,
         loader: speakLoader,
-        errorElement: <Error/>
+        errorElement: <Error />,
       },
       {
         path: "/Earphones",
         element: <EarPhoneProduct />,
         loader: earLoader,
-        errorElement: <Error/>
+        errorElement: <Error />,
       },
       {
         path: "/Headphones/:name",
         element: <Headphone />,
         loader: headDescLoader,
-        errorElement: <Error/>
+        errorElement: <Error />,
       },
       {
         path: "/Speakers/:name",
         element: <Speaker />,
         loader: speakDescLoader,
-        errorElement: <Error/>
-      }, 
+        errorElement: <Error />,
+      },
       {
         path: "/Earphones/:name",
         element: <Earphone />,
         loader: earDescLoader,
-        errorElement: <Error/>
+        errorElement: <Error />,
       },
     ],
   },

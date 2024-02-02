@@ -12,13 +12,13 @@ function Footer() {
             <Link id="prod-nav" to="/">
               Home
             </Link>
-            <Link id="prod-nav" to="/">
+            <Link id="prod-nav" to="/Headphones">
               Headphones
             </Link>
-            <Link id="prod-nav" to="/">
+            <Link id="prod-nav" to="/Speakers">
               Speakers
             </Link>
-            <Link id="prod-nav" to="/">
+            <Link id="prod-nav" to="/Earphones">
               Earphones
             </Link>
           </div>
@@ -33,13 +33,13 @@ function Footer() {
         </div>
         <div className="footer-social">
           <div className="footer-socials">
-            <Link to="/">
+            <Link to="https://www.facebook.com/david.oluwafemi.71465">
               <img src="../Images/Path (1).svg" alt="" />
             </Link>
             <Link to="/">
               <img src="../Images/Path.svg" alt="" />
             </Link>
-            <Link to="/">
+            <Link to="https://twitter.com/Oluwafemi166?s=08">
               <img src="../Images/Shape.svg" alt="" />
             </Link>
           </div>

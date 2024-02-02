@@ -1,12 +1,12 @@
+/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import { useSelector } from "react-redux";
 import { getCart } from "../pages/Cart/cartSlice";
 import { getTotalCartPrice } from "../pages/Cart/cartSlice";
 
-function Checkpay() {
+function Checkpay({ handleSubmit }) {
   const product = useSelector(getCart);
   const totalCartPrice = useSelector(getTotalCartPrice);
-  console.log(product);
   let VAT = 1015;
 
   return (
@@ -39,10 +39,12 @@ function Checkpay() {
         </p>
         <div className="checkout-total grand-tota">
           <span>Grand Total:</span>
-          <span>${totalCartPrice + VAT}</span>{" "}
+          <span>${totalCartPrice + VAT}</span>
         </div>
         <div className="total-btn">
+          <button type="submit" onClick={handleSubmit}>
             Continue & Pay
+          </button>
         </div>
       </div>
     </div>

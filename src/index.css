@@ -67,6 +67,79 @@ body {
   transition: all 0.5s;
 }
 
+@keyframes removeUp {
+  0% {
+    transform: translate(-40rem, -20rem);
+  }
+  20% {
+    transform: translate(-40rem, -5rem);
+  }
+  40% {
+    transform: translate(-40rem, 10rem);
+  }
+  60% {
+    transform: translate(-40rem, 10rem);
+  }
+  80% {
+    transform: translate(-40rem, -5rem);
+  }
+  100% {
+    transform: translate(-40rem, -20rem);
+  }
+}
+
+.popup {
+  position: absolute;
+  transform: translate(-40rem, -20rem);
+  color: #fff;
+  background-color: #000;
+  padding: 1.2rem;
+  border-radius: 5px;
+  width: fit-content;
+  animation: removeUp linear 4s;
+}
+
+.popup p {
+  font-size: 1.87rem;
+}
+
+.itemAdded {
+  font-size: 1.7rem;
+  background-color: #000;
+  text-transform: capitalize;
+  padding: 2rem;
+  width: 21rem;
+  color: #fff;
+}
+
+@keyframes upp {
+  0% {
+    top: -20vh;
+  }
+  20% {
+    top: 20vh;
+  }
+  40% {
+    top: 50vh;
+  }
+  60% {
+    top: 50vh;
+  }
+  80% {
+    top: 20vh;
+  }
+  100% {
+    top: -20vh;
+  }
+}
+.item-AddedBox {
+  position: absolute;
+  left: 45vw;
+  top: -20vh;
+  z-index: 100;
+  animation: upp linear 4s 0s;
+}
+
 /** NAVIGATION SECTION **/
 .main-head {
   background-color: #101010;
@@ -464,7 +537,8 @@ body {
   cursor: pointer;
 }
 
-.features h3,.inthebox-content h3 {
+.features h3,
+.inthebox-content h3 {
   font-size: 2.3rem;
   padding-bottom: 3rem;
   text-transform: uppercase;
@@ -475,7 +549,7 @@ body {
   font-size: 1.24rem;
 }
 
-.features p{
+.features p {
   line-height: 1.8rem;
   font-size: 1.25rem;
 }
@@ -1027,7 +1101,7 @@ body {
   padding: 4rem 8rem;
 }
 
-.total-btn {
+.total-btn button {
   margin-top: 1.4rem;
   color: #fff;
   text-decoration: none;
@@ -1087,14 +1161,26 @@ body {
   color: #101010;
 }
 
+.label-emoney input:checked ~ label {
+  border: 1px solid #d8704a;
+}
+
+.label-emoney input:checked {
+  color: #d8704a;
+}
+
 .checksubmit {
-  display: none;
   position: absolute;
   left: 40vw;
   background-color: #fff;
   padding: 4rem;
   top: 30vh;
   width: 40rem;
+  z-index: 92727;
+}
+
+.closeCheckSubmit {
+  display: none;
 }
 
 .back-checkout {
@@ -1221,4 +1307,34 @@ body {
 
 .check-content span {
   font-size: 1.2rem;
+}
+
+.emoney-box {
+  width: 100%;
+}
+
+.emoney {
+  padding-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.emoney h4 {
+  font-size: 1.45rem;
+  padding-bottom: 1rem;
+}
+
+.emoney-box input {
+  width: 100%;
+}
+
+.cashDelivery {
+  padding-top: 1.5rem;
+}
+
+.cashDelivery p {
+  font-size: 1.45rem;
+  color: #101010;
+  letter-spacing: 0.2px;
 }

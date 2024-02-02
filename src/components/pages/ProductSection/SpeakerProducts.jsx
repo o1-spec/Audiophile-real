@@ -22,7 +22,7 @@ function SpeakerProducts() {
       <div className="display-section">
         <div className="product-container">
           {speakers.map((speaker) =>
-            speaker.id === 2 ? (
+            speaker.id === 2 || speaker.id === 5 ? (
               <ProductDisplayTwo product={speaker} key={speaker.id} />
             ) : (
               <Products product={speaker} key={speaker.id} />

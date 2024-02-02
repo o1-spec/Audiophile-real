@@ -137,7 +137,7 @@
     {
       "earProducts": [
         {
-          "id": 1,
+          "id": 4,
           "name": "YX1 WIRELESS EARPHONES",
           "category": "EarPhones",
           "accronym": "YX1",
@@ -185,7 +185,7 @@
     {
       "speakproducts": [
         {
-          "id": 1,
+          "id": 5,
           "name": "ZX9 SPEAKER",
           "category": "Speakers",
           "accronym": "ZX9",
@@ -229,7 +229,7 @@
           ]
         },
         {
-          "id": 2,
+          "id": 6,
           "name": "ZX7 SPEAKER",
           "category": "Speakers",
           "accronym": "ZX7",
