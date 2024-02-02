@@ -4,13 +4,7 @@ import { useState } from "react";
 import Emoney from "./Emoney";
 import CashOnDelivery from "./CashOnDelivery";
 
-function CheckoutBox({ errors, handleChange, handleSubmit, formData }) {
-  const [selectedPayment, setSelectedPayment] = useState("");
-
-  const handleCheckOutChange = (e) => {
-    setSelectedPayment(e.target.value);
-  };
-
+function CheckoutBox({ errors, handleChange, handleSubmit, formData, selectedPayment, handleCheckOutChange }) {
   return (
     <div className="checkout-boxunit">
       <div>

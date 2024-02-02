@@ -16,6 +16,12 @@ function CheckoutPage() {
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
   const [checkOpen, setCheckOpen] = useState(false);
+  const [selectedPayment, setSelectedPayment] = useState("");
+
+  const handleCheckOutChange = (e) => {
+    setSelectedPayment(e.target.value);
+  };
+
   const toggleCart = () => {
     setCartBar((prevCartBar) => !prevCartBar);
   };
@@ -89,7 +95,7 @@ function CheckoutPage() {
       newErrors.city = "Please provide a City";
     }
 
-    if (formData.paymentMethod === "e-money") {
+    if (selectedPayment === "e-money") {
       const emoneyErrors = validateEmoney();
       Object.assign(newErrors, emoneyErrors);
     } else {
@@ -132,6 +138,9 @@ function CheckoutPage() {
             errors={errors}
             formData={formData}
             handleChange={handleChange}
+            selectedPayment={selectedPayment}
+            handleCheckOutChange={handleCheckOutChange}
+            setSelectedPayment={setSelectedPayment}
           />
           <Checkpay handleSubmit={handleSubmit} />
           <CheckSubmit checkOpen={checkOpen} setCheckOpen={setCheckOpen} />
