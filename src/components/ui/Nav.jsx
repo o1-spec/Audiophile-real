@@ -7,8 +7,7 @@ import CartContent from "../pages/Cart/CartContent";
 import { useSelector } from "react-redux";
 import { getCart } from "../pages/Cart/cartSlice";
 
-function Nav({cartBar, toggleCart}) {
-  
+function Nav({ cartBar, toggleCart, toggleNavbar, isNavbarOpen }) {
   const cart = useSelector(getCart);
 
   return (
@@ -16,7 +15,7 @@ function Nav({cartBar, toggleCart}) {
       <header>
         <div className="header-content">
           <div className="head-name">
-            <div className="nav-img-none">
+            <div className="nav-img-none" onClick={toggleNavbar}>
               <img src="../Images/Group.svg" alt="" />
             </div>
             <h5>audiophile</h5>

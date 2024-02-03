@@ -10,6 +10,7 @@ import { useState } from "react";
 
 function AppLayout() {
   const location = useLocation();
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [cartBar, setCartBar] = useState(false);
   const navigation = useNavigation();
   const isLoading = navigation.state === "loading";
@@ -22,6 +23,10 @@ function AppLayout() {
     setCartBar((prevCartBar) => !prevCartBar);
   };
 
+  const toggleNavbar = (e) => {
+    e.preventDefault();
+    setIsNavbarOpen(!isNavbarOpen);
+  };
   return (
     <>
       <div
@@ -35,6 +40,8 @@ function AppLayout() {
             cartBar={cartBar}
             setCartBar={setCartBar}
             toggleCart={toggleCart}
+            toggleNavbar={toggleNavbar}
+            isNavbarOpen={isNavbarOpen}
           />
         </div>
         <Outlet />

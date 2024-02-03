@@ -8,7 +8,7 @@ function Carts({ cart }) {
   return (
     <div className="cart-content">
       <div className="">
-        <img src={`../public/${cart.imageUrl}`} alt="" />
+        <img src={`/${cart.imageUrl}`} alt="" />
         <div className="content-price">
           <h6>{cart.accronym}</h6>
           <span>${cart.totalPrice}</span>
