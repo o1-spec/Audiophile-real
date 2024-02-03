@@ -15,7 +15,7 @@ const HomeDisplayJson = [
   },
   {
     short: "YX1",
-    name: "EARPHONE",
+    name: "WIRELESS EARPHONE",
     category: "Earphones",
   },
 ];
@@ -82,7 +82,10 @@ function HomeDisplay() {
           </div>
           <div className="prod-3-text">
             <span>YX1 EARPHONES</span>
-            <Link href="/" className="pro-link">
+            <Link
+              to="/EarPhones/YX1 WIRELESS EARPHONES"
+              className="pro-link"
+            >
               See Product
             </Link>
           </div>

@@ -3,7 +3,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function ProductDisplayTwo({product }) {
+function ProductDisplayTwo({ product }) {
   return (
     <div className="product-cont">
       <div className="prodd-info">
@@ -14,7 +14,7 @@ function ProductDisplayTwo({product }) {
         </Link>
       </div>
       <div className="pro-img">
-        <img src={product.imageUrl} alt="" />
+        <img src={`../public/${product.imageUrl}`} alt={product.name} />
       </div>
     </div>
   );
