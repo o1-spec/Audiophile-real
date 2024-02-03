@@ -7,7 +7,7 @@ import Shop from "../../ui/Shop";
 
 function SpeakerProducts() {
   const products = useLoaderData();
-  let speakers = products[2].speakproducts;
+  let speakers = products.products[2].speakproducts;
   //console.log(speakers);
 
   return (

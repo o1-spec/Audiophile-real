@@ -7,7 +7,7 @@ import ProductDesc from "./ProductDesc";
 function Earphone() {
   const { name } = useParams();
   const products = useLoaderData();
-  let earphones = products[1].earProducts;
+  let earphones = products.products[1].earProducts;
   const selectedProduct = earphones.find((head) => head.name === name);
 
   return <ProductDesc selectedProduct={selectedProduct} />;

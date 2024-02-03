@@ -7,7 +7,7 @@ import ProductDesc from "./ProductDesc";
 function Speaker() {
   const { name } = useParams();
   const products = useLoaderData();
-  let speakers = products[2].speakproducts;
+  let speakers = products.products[2].speakproducts;
   const selectedProduct = speakers.find((head) => head.name === name);
 
   return <ProductDesc selectedProduct={selectedProduct} />;

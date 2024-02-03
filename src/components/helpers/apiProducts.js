@@ -1,12 +1,17 @@
-const API_FAKE_URL = "http://localhost:8000/products";
+//const API_FAKE_URL = "http://localhost:8000/products";
+//import data from '../../../data/info.json'
+
 
 export async function getProducts() {
-  const res = await fetch(`${API_FAKE_URL}`);
+ // console.log(data)
+  
+  const res = await fetch('/data/info.json');
 
   if (!res.ok) throw new Error("Failed getting menu");
   const data  = await res.json();
   console.log(data)
   return data;
+
 }
 
  /*

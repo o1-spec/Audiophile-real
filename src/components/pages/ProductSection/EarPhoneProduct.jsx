@@ -8,7 +8,7 @@ import Shop from "../../ui/Shop";
 function EarPhoneProducts() {
   const products = useLoaderData();
   console.log(products);
-  let earphones = products[1].earProducts;
+  let earphones = products.products[1].earProducts;
   console.log(earphones);
 
   return (

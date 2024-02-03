@@ -7,7 +7,7 @@ import Shop from "../../ui/Shop";
 
 function HeadProducts() {
   const products = useLoaderData();
-  let headPhones = products[0].Headproducts;
+  let headPhones = products.products[0].Headproducts;
 
   return (
     <>
