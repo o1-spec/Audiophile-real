@@ -15,7 +15,7 @@ function Checkpay({ handleSubmit }) {
       <div className="checkout-content">
         {product.map((prod) => (
           <div className="prod-checkout" key={prod.id}>
-            <img src={`/public/${prod.imageUrl}`} alt={prod.name} />
+            <img src={`/${prod.imageUrl}`} alt={prod.name} />
             <div className="product-info">
               <p>{prod.accronym}</p>
               <span>${prod.price}</span>
