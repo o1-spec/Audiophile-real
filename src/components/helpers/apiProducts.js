@@ -5,7 +5,7 @@
 export async function getProducts() {
  // console.log(data)
   
-  const res = await fetch('/data/info.json');
+  const res = await fetch('/info.json');
 
   if (!res.ok) throw new Error("Failed getting menu");
   const data  = await res.json();
