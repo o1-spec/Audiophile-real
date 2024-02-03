@@ -7,7 +7,7 @@ function Products({product}) {
   return (
     <div className="product-cont">
       <div>
-        <img src={`/${product.imageUrl}`} alt={product.name} />
+        <img src={`/public/${product.imageUrl}`} alt={product.name} />
       </div>
       <div className="prodd-info">
         <h4 className="prodd-head">{product.name}</h4>
