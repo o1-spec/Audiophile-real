@@ -19,13 +19,13 @@ function AudioInfo() {
           </p>
         </div>
         <div className="audio-img">
-          <img className="audio-desktop" src="/Images/Bitmap_(3).png" alt="" />
-          <img className="audio-none" src="/Images/Bitmap_(4).png" alt="" />
-          <img className="mobile-audio" src="/Images/Bitmap_(10).png" alt="" />
+          <img className="audio-desktop" src="/static/Images/Bitmap_(3).png" alt="" />
+          <img className="audio-none" src="/static/Images/Bitmap_(4).png" alt="" />
+          <img className="mobile-audio" src="/static/Images/Bitmap_(10).png" alt="" />
         </div>
       </div>
     </div>
-  );
+  ); 
 }
 
 export default AudioInfo;

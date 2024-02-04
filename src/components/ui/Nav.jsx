@@ -16,14 +16,14 @@ function Nav({ cartBar, toggleCart, toggleNavbar, isNavbarOpen }) {
         <div className="header-content">
           <div className="head-name">
             <div className="nav-img-none" onClick={toggleNavbar}>
-              <img src="/Images/Group.svg" alt="" />
+              <img src="/static/Images/Group.svg" alt="" />
             </div>
             <h5>audiophile</h5>
           </div>
           <nav className="nav">
             <img
               className="nav-close"
-              src="/Images/cancel-close-svgrepo-com.svg"
+              src="/static/Images/cancel-close-svgrepo-com.svg"
               alt="nav-close"
             />
             <h5 className="mobile-head">Audiophile</h5>
@@ -41,7 +41,7 @@ function Nav({ cartBar, toggleCart, toggleNavbar, isNavbarOpen }) {
             </Link>
           </nav>
           <div className="nav-img" onClick={() => toggleCart()}>
-            <img src="/Images/Combined Shape.svg" alt="" />
+            <img src="/static/Images/Combined Shape.svg" alt="" />
             <span>{cart.length}</span>
           </div>
         </div>

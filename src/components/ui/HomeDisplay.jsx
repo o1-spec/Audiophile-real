@@ -28,7 +28,7 @@ function HomeDisplay() {
       <div className="product-box">
         <div className="prod">
           <div className="product-img">
-            <img src="/Images/image-removebg-preview(38) (1).png" alt="" />
+            <img src="/static/Images/image-removebg-preview(38) (1).png" alt="" />
           </div>
           <div className="product-text">
             <h5 className="prod-head">
@@ -60,7 +60,7 @@ function HomeDisplay() {
             <Link
               to={`/${HomeDisplayJson[1].category}/${HomeDisplayJson[1].short} ${HomeDisplayJson[1].name}`}
               className="prod-link"
-            >
+            > 
               {/*<Link to="/" className="prod-link">*/}
               See Product
             </Link>
@@ -68,17 +68,17 @@ function HomeDisplay() {
           <div className="prod-2-img">
             <img
               className="desktop-prod"
-              src="/Images/Bitmap_(1).png"
+              src="/static/Images/Bitmap_(1).png"
               alt=""
             />
-            <img className="mobile-prod" src="/Images/Bitmap_(9).png" alt="" />
+            <img className="mobile-prod" src="/static/Images/Bitmap_(9).png" alt="" />
           </div>
         </div>
       </div>
       <div className="product-box">
         <div className="prod-3">
           <div className="prod-3-1">
-            <img src="/Images/Bitmap_(2).png" alt="" />
+            <img src="/static/Images/Bitmap_(2).png" alt="" />
           </div>
           <div className="prod-3-text">
             <span>YX1 EARPHONES</span>
