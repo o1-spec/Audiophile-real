@@ -14,7 +14,7 @@ function ProductDisplayTwo({ product }) {
         </Link>
       </div>
       <div className="pro-img">
-        <img src={`./${product.imageUrl}`} alt={product.name} />
+        <img src={`/${product.imageUrl}`} alt={product.name} />
       </div>
     </div>
   );
