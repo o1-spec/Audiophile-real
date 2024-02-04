@@ -27,7 +27,7 @@ function CheckSubmit({ checkOpen }) {
             <div className="checked-item">
               <div className="check-content">
                 <div className="check-content-info">
-                  <img src={CheckCart[0]?.imageUrl} alt={CheckCart[0]?.name} />
+                  <img src={`../src/${CheckCart[0]?.imageUrl}`} alt={CheckCart[0]?.name} />
                   <div className="checked-info">
                     <span>{CheckCart[0]?.accronym}</span>
                     <span>{CheckCart[0]?.price}</span>

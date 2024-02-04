@@ -28,7 +28,7 @@ function HomeDisplay() {
       <div className="product-box">
         <div className="prod">
           <div className="product-img">
-            <img src="./Images/image-removebg-preview(38) (1).png" alt="" />
+            <img src="../src/Images/image-removebg-preview(38) (1).png" alt="" />
           </div>
           <div className="product-text">
             <h5 className="prod-head">
@@ -68,17 +68,17 @@ function HomeDisplay() {
           <div className="prod-2-img">
             <img
               className="desktop-prod"
-              src="./Images/Bitmap (1).png"
+              src="../src/Images/Bitmap_(1).png"
               alt=""
             />
-            <img className="mobile-prod" src="./Images/Bitmap (9).png" alt="" />
+            <img className="mobile-prod" src="../src/Images/Bitmap_(9).png" alt="" />
           </div>
         </div>
       </div>
       <div className="product-box">
         <div className="prod-3">
           <div className="prod-3-1">
-            <img src="./Images/Bitmap (2).png" alt="" />
+            <img src="../src/Images/Bitmap_(2).png" alt="" />
           </div>
           <div className="prod-3-text">
             <span>YX1 EARPHONES</span>

@@ -349,7 +349,12 @@ body {
   padding: 1.3rem 0rem;
 }
 
-.checkout-btn {
+.checkout-btn{
+  border: none;
+  background-color: #fff;
+}
+
+.checkout-btn a {
   margin-top: 1.4rem;
   color: #fff;
   text-decoration: none;
@@ -361,7 +366,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 27rem;
   padding: 1rem 2rem;
   border: none;
   cursor: pointer;

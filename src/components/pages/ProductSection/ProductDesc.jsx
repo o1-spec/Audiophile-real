@@ -66,7 +66,7 @@ function ProductDesc({ selectedProduct }) {
           <div className="prod-describe">
             <div className="desc-img">
               <img
-                src={`/${selectedProduct.imageUrl}`}
+                src={`../src/${selectedProduct.imageUrl}`}
                 alt={selectedProduct.name}
               />
             </div>
@@ -124,7 +124,7 @@ function ProductDesc({ selectedProduct }) {
             {selectedProduct.subImages.map((img) => (
               <img
                 className="prod-img"
-                src={`/${img}`}
+                src={`../src/${img}`}
                 alt="Images"
                 key={img}
               />
@@ -135,7 +135,7 @@ function ProductDesc({ selectedProduct }) {
             <div className="like">
               {selectedProduct.alsoLike.map((also) => (
                 <div className="also" key={also.name}>
-                  <img src={`/${also.alsoImg}`} alt={also.name} />
+                  <img src={`../src/${also.alsoImg}`} alt={also.name} />
                   <p>{also.name}</p>
                   <Link to={`/${also.category}/${also.fullname}`}>
                     See Product
