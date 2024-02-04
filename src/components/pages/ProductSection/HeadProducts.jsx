@@ -30,7 +30,7 @@ function HeadProducts() {
         </div>
       </div>
       <Shop />
-    </>
+    </> 
   );
 }
 

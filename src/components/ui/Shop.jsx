@@ -8,41 +8,41 @@ function Shop() {
         <div className="items">
             <div className="item-box">
                 <div className="item-img">
-                    <img src="../src/Images/image-removebg-preview(41).png" alt=""/>
-                    <img className="oval" src="../src/Images/Oval_Copy 4.svg" alt=""/>
+                    <img src="./Images/image-removebg-preview(41).png" alt=""/>
+                    <img className="oval" src="./Images/Oval_Copy 4.svg" alt=""/>
                 </div>
                 <h5>Headphones</h5>
                 <div className="item-link">
                     <Link to="/Headphones">
                         Shop
                     </Link>
-                    <img src="../src/Images/Path_2.png" alt=""/>
+                    <img src="./Images/Path_2.png" alt=""/>
                 </div>
             </div>
             <div className="item-box">
                 <div className="item-img">
-                    <img src="../src/Images/image-removebg-preview(38).png" alt=""/>
-                    <img className="oval" src="./src/Images/Oval_Copy 4.svg" alt=""/>
+                    <img src="./Images/image-removebg-preview(38).png" alt=""/>
+                    <img className="oval" src="./Images/Oval_Copy 4.svg" alt=""/>
                 </div>
                 <h5>Speakers</h5>
                 <div className="item-link">
                     <Link to="/Speakers">
                         Shop
                     </Link>
-                    <img src="../src/Images/Path_2.png" alt=""/>
+                    <img src="./Images/Path_2.png" alt=""/>
                 </div>
             </div>
             <div className="item-box">
                 <div className="item-img">
-                    <img src="../src/Images/Group_5.png" alt=""/>
-                    <img className="oval" src="../src/Images/Oval_Copy 4.svg" alt=""/>
+                    <img src="./Images/Group_5.png" alt=""/>
+                    <img className="oval" src="./Images/Oval_Copy 4.svg" alt=""/>
                 </div>
                 <h5>Earphones</h5>
                 <div className="item-link">
                     <Link to="/Earphones">
                         Shop
                     </Link>
-                    <img src="../src/Images/Path_2.png" alt=""/>
+                    <img src="./Images/Path_2.png" alt=""/>
                 </div>
             </div>
         </div>

@@ -34,13 +34,13 @@ function Footer() {
         <div className="footer-social">
           <div className="footer-socials">
             <Link to="https://www.facebook.com/david.oluwafemi.71465">
-              <img src="../src/Images/Path (1).svg" alt="" />
+              <img src="./Images/Path (1).svg" alt="" />
             </Link>
             <Link to="/">
-              <img src="../src/Images/Path.svg" alt="" />
+              <img src="./Images/Path.svg" alt="" />
             </Link>
             <Link to="https://twitter.com/Oluwafemi166?s=08">
-              <img src="../src/Images/Shape.svg" alt="" />
+              <img src="./Images/Shape.svg" alt="" />
             </Link>
           </div>
           <span className="copyright">Copyright 2024. All Rights Reserved</span>

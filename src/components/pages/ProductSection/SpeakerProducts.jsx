@@ -17,7 +17,7 @@ function SpeakerProducts() {
           <div className="product-hero-name">
             <h4 className="prod-name">Speakers</h4>
           </div>
-        </div>
+        </div> 
       </div>
       <div className="display-section">
         <div className="product-container">

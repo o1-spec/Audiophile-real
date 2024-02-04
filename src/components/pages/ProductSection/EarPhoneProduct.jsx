@@ -12,7 +12,7 @@ function EarPhoneProducts() {
   console.log(earphones);
 
   return (
-    <>
+    <> 
       <div className="main-head">
         <div className="product-hero">
           <div className="product-hero-name">

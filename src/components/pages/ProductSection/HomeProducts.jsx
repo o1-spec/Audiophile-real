@@ -22,7 +22,7 @@ function HomeProducts() {
               </div>
             </div>
             <div className="hero-img">
-              <img className="desktop-hero" src="../src/Images/Bitmap.png" alt="" />
+              <img className="desktop-hero" src="./Images/Bitmap.png" alt="" />
             </div>
           </div>
         </div>
