@@ -74,6 +74,10 @@
         padding: 2rem 4rem;
     }
 
+    .scrolled .header-content{
+        padding: 2rem 4rem;
+    }
+
     .head-name{
         display: flex;
         align-items: center;

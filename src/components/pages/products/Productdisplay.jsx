@@ -4,6 +4,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Products({product}) {
+  console.log(product.category)
   return (
     <div className="product-cont">
       <div>
@@ -18,6 +19,6 @@ function Products({product}) {
       </div>
     </div>
   );
-}
+} 
 
 export default Products;

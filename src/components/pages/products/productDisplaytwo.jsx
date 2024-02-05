@@ -9,8 +9,8 @@ function ProductDisplayTwo({ product }) {
       <div className="prodd-info">
         <h4 className="prodd-head">{product.name}</h4>
         <p className="prod-text">{product.description}</p>
-        <Link className="prodd-btn" to={`${product.category}/${product.name}`}>
-          See Product
+        <Link className="prodd-btn" to={`${product.name}`}>
+          See Product 
         </Link>
       </div>
       <div className="pro-img">
