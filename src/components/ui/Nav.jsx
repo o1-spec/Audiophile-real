@@ -97,8 +97,4 @@ const observer = new IntersectionObserver(stickyNav,{
 })
 
 observer.observe(header)
-
-  {
-    path: "/product/checkout",
-    element: <CheckoutPage />,
-  },*/
+*/

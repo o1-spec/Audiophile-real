@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: "/", 
+        path: "/",
         element: <HomeProducts />,
       },
       {
@@ -70,6 +70,10 @@ const router = createBrowserRouter([
         errorElement: <Error />,
       },
     ],
+  },
+  {
+    path: "/product/checkout",
+    element: <CheckoutPage />,
   },
 ]);
 
