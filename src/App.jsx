@@ -71,10 +71,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-  {
-    path: "/product/checkout",
-    element: <CheckoutPage />,
-  },
 ]);
 
 function App() {

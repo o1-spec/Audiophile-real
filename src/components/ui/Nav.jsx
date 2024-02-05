@@ -96,4 +96,9 @@ const observer = new IntersectionObserver(stickyNav,{
     rootMargin: '200px'
 })
 
-observer.observe(header)*/
+observer.observe(header)
+
+  {
+    path: "/product/checkout",
+    element: <CheckoutPage />,
+  },*/
