@@ -58,6 +58,10 @@
         width: 2rem;
     } */
 
+    .scrolled .mobile-section{
+        top: 100%;
+    }
+
     .mobile-section{
         transform: translateX(-100%);
         transition: all 0.5s;
@@ -365,7 +369,16 @@
     }
 
     .mobile-section{
+        padding: 6rem 1.8rem;
         width: 100%;
+    }
+
+    .mobile-items{
+        gap: 5rem;
+    }
+
+    .mobile-box{
+        padding-bottom: 1.6rem;
     }
 
     .item-section{
