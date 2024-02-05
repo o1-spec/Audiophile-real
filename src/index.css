@@ -691,7 +691,7 @@ body {
   background-color: #fff;
   padding: 4rem 3rem;
   z-index: 23;
-  transform: translateX(-100%);
+  transform: translateX(-110%);
 }
 
 .items{
