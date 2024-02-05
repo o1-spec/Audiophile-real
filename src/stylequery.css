@@ -389,6 +389,13 @@
         padding: 2rem 2rem;
         padding-bottom: 4rem;
     }
+
+    .checkout-btn a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 29rem;
+    }
 }
 
 @media(max-width: 410px){

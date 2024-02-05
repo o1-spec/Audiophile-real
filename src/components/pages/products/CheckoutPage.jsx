@@ -37,7 +37,7 @@ function CheckoutPage() {
     emoneyNumber: "",
     emoneyPin: "",
   });
- 
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -109,11 +109,15 @@ function CheckoutPage() {
     const isValid = validateForm();
 
     if (isValid) {
-      console.log('Form validation successfull  ')
+      console.log("Form validation successfull  ");
       setCheckOpen(true);
     } else {
       console.log("Form validation failed");
     }
+
+  
+      window.scrollTo(0, 0);
+  
   };
 
   useEffect(() => {
