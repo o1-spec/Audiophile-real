@@ -23,7 +23,7 @@ function CartContent() {
     if (isRemoved) {
       const timeout = setTimeout(() => {
         setIsRemoved(false);
-      }, 10000);
+      }, 3000);
 
       return () => clearTimeout(timeout);
     }

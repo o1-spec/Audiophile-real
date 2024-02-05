@@ -252,6 +252,10 @@
         width: 90vw;
     }
 
+    .item-AddedBox{
+        left: 37vw;
+    }
+
     .prod-2-img img{
         width:  92vw;
     }
@@ -276,6 +280,10 @@
 
     .prod-3-1 img{
         width: 100%;
+    }
+
+    .item-AddedBox{
+        left: 30vw;
     }
 
     .prod-3-text{

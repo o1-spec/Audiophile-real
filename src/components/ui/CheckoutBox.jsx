@@ -7,7 +7,7 @@ import CashOnDelivery from "./CashOnDelivery";
 function CheckoutBox({ errors, handleChange, handleSubmit, formData, selectedPayment, handleCheckOutChange }) {
   return (
     <div className="checkout-boxunit">
-      <div>
+      <div> 
         <h2 className="checkout-head">Checkout</h2>
         <form onSubmit={handleSubmit} className="checkout-boxes">
           <div className="checkout-box">

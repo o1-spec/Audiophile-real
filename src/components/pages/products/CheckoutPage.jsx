@@ -38,7 +38,7 @@ function CheckoutPage() {
     emoneyNumber: "",
     emoneyPin: "",
   });
-
+ 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -98,8 +98,6 @@ function CheckoutPage() {
     if (selectedPayment === "e-money") {
       const emoneyErrors = validateEmoney();
       Object.assign(newErrors, emoneyErrors);
-    } else {
-      return newErrors;
     }
 
     setErrors(newErrors);
@@ -112,6 +110,7 @@ function CheckoutPage() {
     const isValid = validateForm();
 
     if (isValid) {
+      console.log('Form validation successfull  ')
       setCheckOpen(true);
     } else {
       console.log("Form validation failed");
