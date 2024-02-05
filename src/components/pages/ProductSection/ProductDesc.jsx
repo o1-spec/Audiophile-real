@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addItem,
@@ -15,6 +15,7 @@ import ItemAdded from "../Cart/ItemAdded";
 import RemoveItem from "../Cart/RemoveItem";
 
 function ProductDesc({ selectedProduct }) {
+  const navigate = useNavigate();
   const [num, setNum] = useState(1);
   const [pric, setPric] = useState(selectedProduct.price);
   const [addedBlock, setAddedBlock] = useState(false);
@@ -61,7 +62,7 @@ function ProductDesc({ selectedProduct }) {
           {addedBlock === true && <ItemAdded />}
           {already === true && <RemoveItem />}
           <div className="back">
-            <Link to={`/${selectedProduct.category}`}>Go Back</Link>
+            <Link onClick={() => navigate(-1)}>Go Back</Link>
           </div>
           <div className="prod-describe">
             <div className="desc-img">

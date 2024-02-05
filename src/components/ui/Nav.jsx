@@ -22,7 +22,7 @@ function Nav({ cartBar, toggleCart, toggleNavbar, isNavbarOpen }) {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   });
-
+ 
   let navbarClasses = ["header"];
   if (scrolled) {
     navbarClasses.push("scrolled");

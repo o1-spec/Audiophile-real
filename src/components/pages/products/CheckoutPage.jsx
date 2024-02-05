@@ -1,8 +1,6 @@
 /* eslint-disable no-unused-vars */
-import { useSelector } from "react-redux";
-import { useState } from "react";
-import { getCart } from "../Cart/cartSlice";
-import { getTotalCartPrice } from "../Cart/cartSlice";
+import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Footer from "../../ui/Footer";
 import { Link } from "react-router-dom";
 import Nav from "../../ui/Nav";
@@ -12,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import CheckSubmit from "../../ui/CheckSubmit";
 
 function CheckoutPage() {
+  const location = useLocation();
   const [cartBar, setCartBar] = useState(false);
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
@@ -116,6 +115,10 @@ function CheckoutPage() {
       console.log("Form validation failed");
     }
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
 
   return (
     <div className="check-layout">

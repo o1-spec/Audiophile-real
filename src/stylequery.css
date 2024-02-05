@@ -391,6 +391,16 @@
     }
 }
 
+@media(max-width: 410px){
+    .hero-btn a{
+        padding: 1.3rem 1.6rem;
+    }
+
+    .cart-box{
+        width: 34rem;
+    }
+}
+
 @media(max-width: 320px){
     html{
         font-size: 50%;

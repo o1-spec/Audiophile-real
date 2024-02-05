@@ -140,6 +140,10 @@ body {
   animation: upp linear 4s 0s;
 }
 
+.error-message{
+  color: red;
+}
+
 /** NAVIGATION SECTION **/
 .main-head {
   background-color: #101010;
