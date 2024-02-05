@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import CartContent from "../pages/Cart/CartContent";
 import { useSelector } from "react-redux";
 import { getCart } from "../pages/Cart/cartSlice";
+import NavShop from "./NavShop";
 
 function Nav({ cartBar, toggleCart, toggleNavbar, isNavbarOpen }) {
   const cart = useSelector(getCart);
@@ -22,7 +23,7 @@ function Nav({ cartBar, toggleCart, toggleNavbar, isNavbarOpen }) {
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
   });
- 
+
   let navbarClasses = ["header"];
   if (scrolled) {
     navbarClasses.push("scrolled");
@@ -33,18 +34,13 @@ function Nav({ cartBar, toggleCart, toggleNavbar, isNavbarOpen }) {
       <header className={navbarClasses.join(" ")}>
         <div className="header-content">
           <div className="head-name">
-            <div className="nav-img-none" onClick={toggleNavbar}>
+            <div className="nav-img-none" onClick={() => toggleNavbar()}>
               <img src="/static/Images/Group.svg" alt="" />
             </div>
             <h5>audiophile</h5>
           </div>
+          <NavShop isNavbarOpen={isNavbarOpen} />
           <nav className="nav">
-            <img
-              className="nav-close"
-              src="/static/Images/cancel-close-svgrepo-com.svg"
-              alt="nav-close"
-            />
-            <h5 className="mobile-head">Audiophile</h5>
             <Link to="/" className="nav-link">
               Home
             </Link>

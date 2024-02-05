@@ -23,8 +23,7 @@ function AppLayout() {
     setCartBar((prevCartBar) => !prevCartBar);
   };
 
-  const toggleNavbar = (e) => {
-    e.preventDefault();
+  const toggleNavbar = () => {
     setIsNavbarOpen(!isNavbarOpen);
   };
   return (
