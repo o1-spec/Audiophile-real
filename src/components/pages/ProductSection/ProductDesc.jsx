@@ -10,7 +10,7 @@ import {
 } from "../Cart/cartSlice";
 import AlreadyCart from "../Cart/AlreadyCart";
 import AddToCart from "../Cart/AddToCart";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ItemAdded from "../Cart/ItemAdded";
 import RemoveItem from "../Cart/RemoveItem";
 
@@ -24,8 +24,18 @@ function ProductDesc({ selectedProduct }) {
   const dispatch = useDispatch();
   const { id, imageUrl, name, price, quantity, accronym } = selectedProduct;
 
-  const currentQuantity = useSelector(getCurrentQuantityById(id));
-  console.log(selectedProduct.inTheBox);
+  const currentQuantity = useSelector(getCurrentQuantityById(id)) || 0;
+  
+  const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+  useEffect(() => {
+    // Set initial quantity and price based on stored cart
+    const storedItem = storedCart.find((item) => item.id === id);
+    if (storedItem) {
+      setNum(storedItem.quantity);
+      setPric(storedItem.totalPrice);
+    }
+  }, [id, storedCart]);
+  //console.log(selectedProduct.inTheBox);
 
   const isInCart = currentQuantity > 0;
 

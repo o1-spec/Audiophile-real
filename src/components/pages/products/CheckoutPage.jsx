@@ -14,6 +14,7 @@ function CheckoutPage() {
   const [cartBar, setCartBar] = useState(false);
   const navigate = useNavigate();
   const [errors, setErrors] = useState({});
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
   const [checkOpen, setCheckOpen] = useState(false);
   const [selectedPayment, setSelectedPayment] = useState("");
 
@@ -23,6 +24,10 @@ function CheckoutPage() {
 
   const toggleCart = () => {
     setCartBar((prevCartBar) => !prevCartBar);
+  };
+
+  const toggleNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
   };
 
   const [formData, setFormData] = useState({
@@ -105,7 +110,7 @@ function CheckoutPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    
     const isValid = validateForm();
 
     if (isValid) {
@@ -115,9 +120,7 @@ function CheckoutPage() {
       console.log("Form validation failed");
     }
 
-  
-      window.scrollTo(0, 0);
-  
+    window.scrollTo(0, 0);
   };
 
   useEffect(() => {
@@ -133,6 +136,8 @@ function CheckoutPage() {
             cartBar={cartBar}
             setCartBar={setCartBar}
             toggleCart={toggleCart}
+            toggleNavbar={toggleNavbar}
+            isNavbarOpen={isNavbarOpen}
           />
         </div>
         <div className="check-back">

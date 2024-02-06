@@ -18,7 +18,7 @@ function Checkpay({ handleSubmit }) {
             <img src={`/static/Images/${prod.imageUrl}`} alt={prod.name} />
             <div className="product-info">
               <p>{prod.accronym}</p>
-              <span>${prod.price}</span>
+              <span>${prod.totalPrice}</span>
             </div>
             <div className="prod-quantity">&times;{prod.quantity}</div>
           </div>

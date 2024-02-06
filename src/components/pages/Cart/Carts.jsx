@@ -13,7 +13,7 @@ function Carts({ cart }) {
           <h6>{cart.accronym}</h6>
           <span>${cart.totalPrice}</span>
         </div>
-      </div>
+      </div> 
       <div className="content-btns">
         <button
           onClick={() => {
