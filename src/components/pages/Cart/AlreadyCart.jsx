@@ -1,22 +1,26 @@
 /* eslint-disable react/prop-types */
-
 /* eslint-disable no-unused-vars */
-function AlreadyCart({ setAlready, already }) {
-  function handleAlready() {
-    setAlready(false);
+import { toast } from "react-toastify";
 
-    const intervalId = setInterval(() => {
-      setAlready(true);
-      console.log(already);
-    }, 2000);
-
-    setTimeout(() => {
-      clearInterval(intervalId);
-    }, 2000);
-  }
+function AlreadyCart() {
+  const notify = () => {
+    toast.success("Item Already Present", {
+      position: "bottom-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      style: {
+        fontSize: '1.5rem',
+      },
+    });
+  };
 
   return (
-    <button className="add-cart" onClick={handleAlready}>
+    <button className="add-cart" onClick={() => notify()}>
       Add to Cart
     </button>
   );

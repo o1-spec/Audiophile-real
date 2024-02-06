@@ -6,5 +6,5 @@ function AddToCart({handleToCart}) {
     </button>
   ); 
 }
-
+ 
 export default AddToCart;

@@ -1,33 +1,31 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import { useState, useEffect } from "react";
+import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { clearCart, getCart, getTotalCartPrice } from "./cartSlice";
 import Carts from "./Carts";
 import Checkout from "../../ui/Checkout";
 
-const Popup = ({ onClose }) => (
-  <div className="popup">
-    <p style={{fontSize: '1.5rem'}} className="">Item removed from the cart!</p>
-    
-  </div>
-);
-
 function CartContent() {
-  const [isRemoved, setIsRemoved] = useState(false);
   const totalCartPrice = useSelector(getTotalCartPrice);
   const cart = useSelector(getCart);
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    if (isRemoved) {
-      const timeout = setTimeout(() => {
-        setIsRemoved(false);
-      }, 3000);
-
-      return () => clearTimeout(timeout);
-    }
-  }, [isRemoved]);
+  const notify = () => {
+    toast.error("Items Removed from Cart", {
+      position: "bottom-left",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      style: {
+        fontSize: '1.5rem',
+      },
+    });
+  };
 
   console.log(cart);
   return (
@@ -37,12 +35,11 @@ function CartContent() {
         <p
           onClick={() => {
             dispatch(clearCart());
-            setIsRemoved(true);
+            notify();
           }}
         >
           Remove all
         </p>
-        {isRemoved && <Popup onClose={() => setIsRemoved(false)} />}
       </div>
       {!cart.length ? (
         <p>No Items in cart</p>

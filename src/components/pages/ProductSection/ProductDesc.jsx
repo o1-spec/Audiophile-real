@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addItem,
@@ -11,21 +13,17 @@ import {
 import AlreadyCart from "../Cart/AlreadyCart";
 import AddToCart from "../Cart/AddToCart";
 import { useState, useEffect } from "react";
-import ItemAdded from "../Cart/ItemAdded";
-import RemoveItem from "../Cart/RemoveItem";
 
 function ProductDesc({ selectedProduct }) {
   const navigate = useNavigate();
   const [num, setNum] = useState(1);
   const [pric, setPric] = useState(selectedProduct.price);
-  const [addedBlock, setAddedBlock] = useState(false);
-  const [already, setAlready] = useState(false);
 
   const dispatch = useDispatch();
   const { id, imageUrl, name, price, quantity, accronym } = selectedProduct;
 
   const currentQuantity = useSelector(getCurrentQuantityById(id)) || 0;
-  
+
   const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
   useEffect(() => {
     // Set initial quantity and price based on stored cart
@@ -63,14 +61,27 @@ function ProductDesc({ selectedProduct }) {
     };
     dispatch(addItem(newItem));
 
-    setInterval(setAddedBlock(true), 2000);
+    const notify = () => {
+      toast.success("Item Added to Cart", {
+        position: "bottom-left",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        style: {
+          fontSize: "1.5rem",
+        },
+      });
+    };
+    notify();
   }
   return (
     <>
       {selectedProduct ? (
         <div className="product-description">
-          {addedBlock === true && <ItemAdded />}
-          {already === true && <RemoveItem />}
           <div className="back">
             <Link onClick={() => navigate(-1)}>Go Back</Link>
           </div>
@@ -102,7 +113,7 @@ function ProductDesc({ selectedProduct }) {
                   </button>
                 </div>
                 {isInCart ? (
-                  <AlreadyCart setAlready={setAlready} already={already} />
+                  <AlreadyCart />
                 ) : (
                   <AddToCart handleToCart={handleToCart} />
                 )}

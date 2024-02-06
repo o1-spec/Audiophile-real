@@ -23,6 +23,7 @@ import Speaker, {
 } from "./components/pages/ProductSection/Speaker";
 import CheckoutPage from "./components/pages/products/CheckoutPage";
 import Error from "./components/ui/Error";
+import { ToastContainer } from "react-toastify";
 
 const router = createBrowserRouter([
   {
@@ -78,7 +79,12 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <>
+      <RouterProvider router={router} />
+      <ToastContainer />
+    </>
+  );
 }
 
 export default App;
