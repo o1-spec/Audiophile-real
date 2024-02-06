@@ -41,6 +41,7 @@ function AppLayout() {
             toggleCart={toggleCart}
             toggleNavbar={toggleNavbar}
             isNavbarOpen={isNavbarOpen}
+            setIsNavbarOpen={setIsNavbarOpen}
           />
         </div>
         <Outlet />

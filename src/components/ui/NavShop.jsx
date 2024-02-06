@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 
-function NavShop({ isNavbarOpen }) {
+function NavShop({ isNavbarOpen, setIsNavbarOpen }) {
   return (
     <div
       className={isNavbarOpen ? "nav-open mobile-section" : "mobile-section"}
@@ -14,7 +14,9 @@ function NavShop({ isNavbarOpen }) {
           </div>
           <h5>Headphones</h5>
           <div className="mobile-nav-link">
-            <Link to="/Headphones">Shop</Link>
+            <Link to="/Headphones" onClick={() => setIsNavbarOpen(false)}>
+              Shop
+            </Link>
             <img src="/static/Images/Path_2.png" alt="" />
           </div>
         </div>
@@ -25,7 +27,9 @@ function NavShop({ isNavbarOpen }) {
           </div>
           <h5>Speakers</h5>
           <div className="mobile-nav-link">
-            <Link to="/Speakers">Shop</Link>
+            <Link to="/Speakers" onClick={() => setIsNavbarOpen(false)}>
+              Shop
+            </Link>
             <img src="/static/Images/Path_2.png" alt="" />
           </div>
         </div>
@@ -36,7 +40,9 @@ function NavShop({ isNavbarOpen }) {
           </div>
           <h5>Earphones</h5>
           <div className="mobile-nav-link">
-            <Link to="/Earphones">Shop</Link>
+            <Link to="/Earphones" onClick={() => setIsNavbarOpen(false)}>
+              Shop
+            </Link>
             <img src="/static/Images/Path_2.png" alt="" />
           </div>
         </div>

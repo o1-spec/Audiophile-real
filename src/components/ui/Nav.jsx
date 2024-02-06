@@ -8,13 +8,13 @@ import { useSelector } from "react-redux";
 import { getCart } from "../pages/Cart/cartSlice";
 import NavShop from "./NavShop";
 
-function Nav({ cartBar, toggleCart, toggleNavbar, isNavbarOpen }) {
+function Nav({ cartBar, toggleCart, toggleNavbar, isNavbarOpen, setIsNavbarOpen }) {
   const cart = useSelector(getCart);
   const [scrolled, setScrolled] = useState(false);
   const handleScroll = () => {
     const offset = window.scrollY;
     if (offset > 200) {
-      setScrolled(true);
+      setScrolled(true); 
     } else {
       setScrolled(false);
     }
@@ -39,7 +39,7 @@ function Nav({ cartBar, toggleCart, toggleNavbar, isNavbarOpen }) {
             </div>
             <h5>audiophile</h5>
           </div>
-          <NavShop isNavbarOpen={isNavbarOpen} />
+          <NavShop isNavbarOpen={isNavbarOpen} setIsNavbarOpen={setIsNavbarOpen}/>
           <nav className="nav">
             <Link to="/" className="nav-link">
               Home
