@@ -99,6 +99,10 @@ function CheckoutPage() {
       newErrors.city = "Please provide a City";
     }
 
+    if (!selectedPayment) {
+      newErrors.selectedPayment = "Please input a selected payment";
+    }
+
     if (selectedPayment === "e-money") {
       const emoneyErrors = validateEmoney();
       Object.assign(newErrors, emoneyErrors);
@@ -110,7 +114,7 @@ function CheckoutPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     const isValid = validateForm();
 
     if (isValid) {

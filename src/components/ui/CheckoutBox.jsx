@@ -145,6 +145,9 @@ function CheckoutBox({ errors, handleChange, handleSubmit, formData, selectedPay
                       <span className="check-mark"></span>
                     </label>
                   </div>
+                  {errors.selectedPayment && (
+                  <span className="error-message">{errors.selectedPayment}</span>
+                )}
                 </div>
               </div>
             </div>

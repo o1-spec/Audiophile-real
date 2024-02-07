@@ -1224,13 +1224,13 @@ body {
 }
 
 .checksubmit {
-  position: absolute;
+  position: fixed;
   left: 40vw;
   background-color: #fff;
   padding: 4rem;
-  top: 30vh;
+  top: 20vh;
   width: 40rem;
-  z-index: 92727;
+  z-index: 92;
 }
 
 .closeCheckSubmit {
